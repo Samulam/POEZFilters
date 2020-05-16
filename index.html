@@ -1,0 +1,349 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+   
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <head>
+    <title>Path of EZFilters</title>
+  
+</head>
+  <body>
+    <script src="script.js"></script>
+  </body>
+ <body>
+    <h1>Path of EZFilters</h1>
+    <hr>
+    <h3>Welcome!  Let's get started:</h3>
+    
+ 
+  <br>
+ <!--Show or Hide items-->
+  
+  <div>
+    <form>
+      I would like to
+      <select id="showHide" name="showHide" size="1">
+   <option value="Show"> Show</option>
+      <option value="Hide">Hide</option>
+      </select>
+      <br><br>
+      <!--choose class type-->
+      <label for="classType">This class type:  </label>  
+      <select id="classType"  name="classType"  size="1"> 
+        <option value=" ">Choose class type</option>
+        <option value='"Currency"'>
+      Currency</option>
+        <option value='"Amulet"'>Amulet</option>
+        <option value='"Ring"'>Ring</option>   
+        <option value='"Belt"'>Belt</option>
+        <option value='"Helmet"'>Helmet</option>
+        <option value='"Body Armour"'>Body Armour</option>
+        <option value='"Gloves"'>Gloves</option>
+        <option value='"Boots"'>Boots</option>
+        <option value='"Claw"'>Claw</option>
+        <option value='"Dagger"'>Dagger</option>
+        <option value='"One Hand Sword"'>One Hand Sword</option>
+        <option value='"Two Hand Sword"'>Two Hand Sword</option>
+        <option value='"One Hand Axe"'>One Hand Axe</option><option value='"Two Hand Axe"'>Two Hand Axe</option>
+        <option value='"One Hand Mace"'>One Hand Mace</option><option value='"Two Hand Mace"'>Two Hand Mace</option>
+        <option value='"Shield"'>Shield</option>
+        <option value='"Bow"'>Bow</option>
+        <option value='"Quiver"'>Quiver</option>
+        <option value='"Staff"'>Staff</option>
+        <option value='"Warstaff"'>Warstaff</option>
+        <option value='"Sceptre"'>Sceptre</option>
+        <option value='"Wand"'>Wand</option>
+        <option value='"Active Skill Gem"'>Skill Gems</option><option value='"Support Skill Gem"'>Support Gems</option><option value='"Jewel"'>Jewels</option>
+        <option value='"DivinationCard"'>Divination Cards</option>
+        <option value='"Map"'>Maps</option>
+        <option value='"MapFragment"'>Map Fragments</option>
+      </select>
+        <br>
+        <br>
+      
+      
+      <!--choose rarity-->
+      With rarities that are:
+      <select id="operator">
+<option value=" = " selected>Equal to</option>
+<option value=" >= ">Greater than or equal to</option>
+<option value=" <= ">Less than or equal to</option>
+      </select>
+
+      <select id="rarity">
+        <option value=" " selected>This rarity value</option>
+     <option value="Normal " > 
+        
+      Normal</option>
+        <option  value="Magic " >
+        
+      Magic</option>
+      <option  value="Rare ">
+        
+      Rare</option>
+      <option  value="Unique ">
+        
+      Unique</option>
+      </select>
+      <br><br>
+      <!--specify link conditions-->
+        As for links:
+        <select id="links">
+          <option value=" ">Skip this part</option>
+        <option value="SocketGroup " >
+      The gem sockets are all linked</option>
+      <option value="Sockets " checked
+      >I don't care if they are linked or not </option>
+      <option value="LinkedSockets "
+      >I want a minimum of this many links: </option>
+        </select>
+
+      <select id="numberLinks">
+        <option value=" ">Number of links</option>
+        <option value=" >= 1">
+      1</option>
+        <option value=" >= 2">
+      2</option>
+        <option value=" >= 3">
+      3</option>
+        <option value=" >= 4">
+      4</option>
+        <option value=" >= 5">
+      5</option>
+        <option value=" 6">
+      6</option>
+      </select>
+      <br><br>
+      <!--specify socket colors-->
+        I want this many sockets in RED:
+        <select id="socketColorRed" > 
+          <option value="" selected>0</option>
+          <option value="R">
+      1</option>
+     
+        <option value="RR">
+      2</option> 
+        <option value="RRR">
+      3</option> 
+        <option value="RRRR">
+      4</option> 
+        <option value="RRRRR">
+      5</option> 
+        <option value="RRRRRR">
+      6</option> 
+        </select>
+      I want this many sockets in GREEN:
+        <select id="socketColorGreen" > 
+          <option value="" selected>0</option>
+        <option value="G">
+      1</option> 
+          <option value="GG">
+      2</option> 
+          <option value="GGG">
+      3</option> 
+          <option value="GGGG">
+      4</option> 
+          <option value="GGGGG">
+      5</option>
+          <option value="GGGGGG">
+      6</option>
+      </select>
+      I want this many sockets in BLUE:
+        <select id="socketColorBlue" > 
+          <option value="" selected>0</option>
+        <option value="B">
+      1</option> 
+          <option value="BB">
+      2</option> 
+          <option value="BBB">
+      3</option> 
+          <option value="BBBB">
+      4</option> 
+          <option value="BBBBB">
+      5</option>
+          <option value="BBBBBB">
+      6</option>
+      </select>
+      <br><br>  
+      <!--specify look of item labels-->
+      <b>For the look of the item labels:</b><br><br>
+      <label for="textColor">Set the text color to this RGBA*: </label>
+  <input type="text" id="textColor" name="textColor"><br>Please use spaces, no commas<br><br>
+     
+      
+      <label for="borderColor"> Set the text border color to this RGBA*:  </label>
+      <input type="text" id="borderColor" name="borderColor"><br>Please use spaces, no commas<br><br>
+      <label for="backgroundColor">Set the background color of the text box to this RGBA*:  </label>
+      <input type="text" id="backgroundColor" name="backgroundColor">
+      <br>Please use spaces, no commas<br><br>
+       *Don't know your RGBA numbers?  Click on this <input type="color" value="#ff00ff">  then enter the Red-Green-Blue numbers into the text box(es) above.  It should like this: 255 0 255<br>
+        <br>
+      <label for="fontSize">I want the font size to be this big, (the default is 32):  </label>
+  <select id="fontSize" size="1">
+      <option value="18">18</option> 
+    <option value="22">22</option> 
+    <option value="24">24</option> 
+    <option value="26">26</option> 
+    <option value="28">28</option> 
+    <option value="32" selected>32</option>
+    <option value="36">36</option>
+    <option value="45">45</option>
+      </select>
+      <br><br>
+     <!--design minimap alerts-->
+      <!--minimap icon size-->
+      <b>Minimap Icons</b><br><br>
+      I want an icon for this item on the minimap!  (Skip this section if you don't want this)<br><br>
+      Make it this big:
+      <select id=
+       "iconSize"  >
+       <option value=" ">Choose size</option>
+      <option value="0">Small</option>
+      <option value=" 1 " >
+      Medium</option>
+      <option value=" 2 " >
+      Large</option>
+<option value=" " checked>
+      Skip this</option>
+</select>
+      <br><br>
+      <!--minimap icon color-->
+      In this color**:
+      <select id="iconColor">
+        <option value=" " selected>Options:</option>
+      <option value="Red ">Red</option>
+              <option value="Green ">Green</option>
+        <option value="Blue ">Blue</option>
+        <option value="Brown ">Brown</option>
+        <option value="White ">White</option>
+        <option value="Yellow ">Yellow</option>
+        <option value="Cyan ">Cyan</option>
+        <option value="Grey ">Grey</option>
+        <option value="Orange ">Orange</option>
+        <option value="Pink ">Pink</option>
+        <option value="Purple ">Purple</option>
+              </select>
+      <br><br>
+      <!--set icon shape-->
+      ...and in this shape:
+      <select id="iconShape">
+        <option value=" " selected>Options:</option>
+        <option value="Circle">Circle</option>
+        <option value="Diamond">Diamond</option>
+        <option value="Hexagon">Hexagon</option>
+        <option value="Square">Square</option>
+        <option value="Star">Star</option>
+        <option value="Triangle">Triangle</option>
+        <option value="Cross">Cross</option>
+        <option value="Moon">Moon</option>
+        <option value="Raindrop">Raindrop</option>
+        <option value="Kite">Kite</option>
+        <option value="Pentagon">Pentagon</option>
+        <option value="UpsideDownHouse">Upside Down House</option>
+        
+      </select>
+      <br><br>
+      <!--item drop beam effect-->
+      Let there be light!  Show a temporary beam effect when this particular item drops in this color**:
+      <select id="beamEffect">
+        <option value="" selected>Options:</option>
+      <option value="Red">Red</option>
+              <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown">Brown</option>
+        <option value="White">White</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Cyan">Cyan</option>
+        <option value="Grey">Grey</option>
+        <option value="Orange">Orange</option>
+        <option value="Pink">Pink</option>
+        <option value="Purple">Purple</option>
+      </select>
+      <br><br>
+      **Sorry, no RGBA!  Only these colors are used in <i>Path of Exile</i> for this.
+        
+    <br><br>
+    <div>
+      <label for="dataToText">I'm done now!  Ready to </label>
+            <input type="button" id="dataToText" value="Save data to text file" onclick="saveFile()" />
+        </div>
+      
+      </form>
+    
+        </body>
+     <!--collect data and create downloadable text file-->
+     <script>
+    let saveFile = () => {
+    	
+        // Get the data from each element on the form.
+    	const showHide = document.getElementById('showHide');
+      const classType = document.getElementById('classType');
+        const operator = document.getElementById('operator');
+
+      const rarity = document.getElementById('rarity');
+     
+      const links = document.getElementById('links');
+      const someLinks = document.getElementById('someLinks');
+      const socketColorRed = document.getElementById('socketColorRed');
+      const socketColorGreen = document.getElementById('socketColorGreen');
+      const socketColorBlue = document.getElementById('socketColorBlue');
+      const textColor = document.getElementById('textColor');
+      const borderColor = document.getElementById('borderColor');
+      const backgroundColor = document.getElementById('backgroundColor');
+      const fontSize = document.getElementById('fontSize');
+      const iconSize = document.getElementById('iconSize');
+      const iconColor = document.getElementById('iconColor');
+      const iconShape = document.getElementById('iconShape');
+      const beamEffect = document.getElementById('beamEffect');
+      
+        // This variable stores all the data.
+        let data = 
+            '\r ' + showHide.value 
+        + ' \r\n ' + 
+            'Class ' + classType.value 
+        + ' \r\n ' + 
+            'Rarity '  + operator.value + rarity.value  
+        + ' \r\n ' + 
+            links.value + numberLinks.value + socketColorRed.value +socketColorGreen.value + socketColorBlue.value 
+        + ' \r\n ' + 
+            'SetTextColor ' + textColor.value
+        + ' \r\n ' +
+            'SetBorderColor ' + borderColor.value
+        + ' \r\n ' +
+            'SetBackgroundColor ' + backgroundColor.value
+        + ' \r\n ' +
+            'SetFontSize ' + fontSize.value
+        + ' \r\n ' +
+            'MiniMapIcon ' + iconSize.value + iconColor.value + iconShape.value
+        + ' \r\n ' +
+            'PlayEffect ' + beamEffect.value + ' Temp'
+        + ' \r\n ' 
+        ;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'POEZFilter.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+     </html>
+
+
+
+
+</html>
