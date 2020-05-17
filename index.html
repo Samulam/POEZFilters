@@ -184,56 +184,9 @@
       6</option>
       </select>
       <br><br>
-in these colors:
+in the colors specified above
  
-        <select id="socketColorRed" > 
-          <option value="" selected>Number of RED:</option>
-          <option value="R">
-      1</option>
-     
-        <option value="RR">
-      2</option> 
-        <option value="RRR">
-      3</option> 
-        <option value="RRRR">
-      4</option> 
-        <option value="RRRRR">
-      5</option> 
-        <option value="RRRRRR">
-      6</option> 
-        </select>
-      
-        <select id="socketColorGreen" > 
-          <option value="" selected>Number of GREEN:</option>
-        <option value="G">
-      1</option> 
-          <option value="GG">
-      2</option> 
-          <option value="GGG">
-      3</option> 
-          <option value="GGGG">
-      4</option> 
-          <option value="GGGGG">
-      5</option>
-          <option value="GGGGGG">
-      6</option>
-      </select>
-      
-        <select id="socketColorBlue" > 
-          <option value="" selected>Number of BLUE:</option>
-        <option value="B">
-      1</option> 
-          <option value="BB">
-      2</option> 
-          <option value="BBB">
-      3</option> 
-          <option value="BBBB">
-      4</option> 
-          <option value="BBBBB">
-      5</option>
-          <option value="BBBBBB">
-      6</option>
-      </select>
+        
       <br><br><hr>
       <!--specify look of item labels-->
       <b>For the look of the item labels:</b><br><br>
@@ -362,9 +315,7 @@ in these colors:
       const socketGroupBlue = document.getElementById('socketGroupBlue');
 const socketNumber = document.getElementById('socketNumber');
 
-      const socketColorRed = document.getElementById('socketColorRed');
-      const socketColorGreen = document.getElementById('socketColorGreen');
-      const socketColorBlue = document.getElementById('socketColorBlue');
+      
       const textColor = document.getElementById('textColor');
       const borderColor = document.getElementById('borderColor');
       const backgroundColor = document.getElementById('backgroundColor');
@@ -384,10 +335,10 @@ const socketNumber = document.getElementById('socketNumber');
         + ' \r\n ' + 
             'LinkedSockets ' + numberLinks.value 
             + ' \r\n ' +
-'SocketGroup' +  
+'SocketGroup ' +  
             socketGroupRed.value +socketGroupGreen.value + socketGroupBlue.value 
         + ' \r\n ' + 
-'Sockets ' + socketNumber.value + socketColorRed.value +socketColorGreen.value + socketColorBlue.value
+'Sockets ' + socketNumber.value 
 + ' \r\n ' + 
             'SetTextColor ' + textColor.value
         + ' \r\n ' +
