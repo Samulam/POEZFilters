@@ -96,7 +96,7 @@
        
 
       <select id="numberLinks">
-        <option value=" ">Number of links</option>
+        <option value=" = 0 ">Number of links</option>
         <option value=" >= 1">
       1</option>
         <option value=" >= 2">
@@ -110,25 +110,9 @@
         <option value=" = 6">
       6</option>
       </select>
-      <i>Skip if you'd rather do a grouping</i>
+     
       <br><br>
-      I want a group of at least this many linked sockets 
-      <select id="groupLinks">
-        <option value=" ">Number of linked sockets</option>
-        <option value=" >= 1">
-      1</option>
-        <option value=" >= 2">
-      2</option>
-        <option value=" >= 3">
-      3</option>
-        <option value=" >= 4">
-      4</option>
-        <option value=" >= 5">
-      5</option>
-        <option value=" = 6">
-      6</option>
-      </select>
-      <br><br>
+    That linked group should have
       with these colors:
 
       <!--specify socket colors-->
@@ -185,7 +169,7 @@
       <b>Sockets</b><br><br>
       I don't care about links, I just want at least this many sockets:
       <select id="socketNumber">
-        <option value=" ">Number of sockets</option>
+        <option value=" = 0 ">Number of sockets</option>
         <option value=" >= 1">
       1</option>
         <option value=" >= 2">
@@ -372,7 +356,7 @@ in these colors:
       const rarity = document.getElementById('rarity');
      
       const numberLinks = document.getElementById('numberLinks');
-      const groupLinks = document.getElementById('groupLinks');
+      
       const socketGroupRed = document.getElementById('socketGroupRed');
       const socketGroupGreen = document.getElementById('socketGroupGreen');
       const socketGroupBlue = document.getElementById('socketGroupBlue');
@@ -400,7 +384,7 @@ const socketNumber = document.getElementById('socketNumber');
         + ' \r\n ' + 
             'LinkedSockets ' + numberLinks.value 
             + ' \r\n ' +
-'SocketGroup' + groupLinks.value + 
+'SocketGroup' +  
             socketGroupRed.value +socketGroupGreen.value + socketGroupBlue.value 
         + ' \r\n ' + 
 'Sockets ' + socketNumber.value + socketColorRed.value +socketColorGreen.value + socketColorBlue.value
