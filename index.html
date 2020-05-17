@@ -89,7 +89,10 @@
       </select>
       <br><br>
       <!--specify link conditions-->
-        As for links, I'll take anything with at least this many links: 
+      <hr>
+      <b>Links</b><br>
+      <i>Skip this section if you chose an item without links.</i><br><br>
+       I'll take anything with at least this many links: 
        
 
       <select id="numberLinks">
@@ -107,7 +110,7 @@
         <option value=" = 6">
       6</option>
       </select>
-      Skip if you'd rather do a grouping
+      <i>Skip if you'd rather do a grouping</i>
       <br><br>
       I want a group of at least this many linked sockets 
       <select id="groupLinks">
@@ -178,7 +181,8 @@
           <option value="BBBBBB">
       6</option>
       </select>
-      <br><br>  
+      <br><br>  <hr>
+      <b>Sockets</b><br><br>
       I don't care about links, I just want at least this many sockets:
       <select id="socketNumber">
         <option value=" ">Number of sockets</option>
@@ -246,18 +250,18 @@ in these colors:
           <option value="BBBBBB">
       6</option>
       </select>
-      <br><br>
+      <br><br><hr>
       <!--specify look of item labels-->
       <b>For the look of the item labels:</b><br><br>
       <label for="textColor">Set the text color to this RGB*: </label>
-  <input type="text" id="textColor" name="textColor"><br>Please use spaces, no commas<br><br>
+  <input type="text" id="textColor" name="textColor"><i> Please use spaces, no commas</i><br><br>
      
       
       <label for="borderColor"> Set the text border color to this RGB*:  </label>
-      <input type="text" id="borderColor" name="borderColor"><br>Please use spaces, no commas<br><br>
+      <input type="text" id="borderColor" name="borderColor"><i> Please use spaces, no commas</i><br><br>
       <label for="backgroundColor">Set the background color of the text box to this RGB*:  </label>
       <input type="text" id="backgroundColor" name="backgroundColor">
-      <br>Please use spaces, no commas<br><br>
+      <i> Please use spaces, no commas</i><br><br>
        *Don't know your RGB numbers?  Click on this <input type="color" value="#ff00ff">  then enter the Red-Green-Blue numbers into the text box(es) above.  It should like this: 255 0 255<br>
         <br>
       <label for="fontSize">I want the font size to be this big:  </label>
@@ -272,7 +276,7 @@ in these colors:
     <option value="45">45</option>
       </select>
       (the default is 32)
-      <br><br>
+      <br><br><hr>
      <!--design minimap alerts-->
       <!--minimap icon size-->
       <b>Minimap Icons (shown when item is received as a drop)</b><br><br>
@@ -325,7 +329,8 @@ in these colors:
         <option value="UpsideDownHouse">Upside Down House</option>
         
       </select>
-      <br><br>
+      <br><br><hr>
+      <b>Beam Effect</b><br><br>
       <!--item drop beam effect-->
       Let there be light!  Show a temporary beam effect when this particular item drops in this color**:
       <select id="beamEffect">
@@ -342,11 +347,12 @@ in these colors:
         <option value="Pink">Pink</option>
         <option value="Purple">Purple</option>
       </select>
-      <br><br>
+      <br><br><hr>
       **Sorry, no RGB numbers!  Only these colors are used in <i>Path of Exile</i> for this.
         
     <br><br>
     <div>
+      
       <label for="dataToText">I'm done now!  Ready to </label>
             <input type="button" id="dataToText" value="Save data to text file" onclick="saveFile()" />
         </div>
