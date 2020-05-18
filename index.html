@@ -67,9 +67,9 @@
       <!--choose rarity-->
       With rarities that are:
       <select id="operator">
-<option value=" = " selected>Equal to</option>
-<option value=" >= ">Greater than or equal to</option>
-<option value=" <= ">Less than or equal to</option>
+<option value="Rarity = " selected>Equal to</option>
+<option value="Rarity >= ">Greater than or equal to</option>
+<option value="Rarity <= ">Less than or equal to</option>
       </select>
 
       <select id="rarity">
@@ -92,30 +92,31 @@
       <hr>
       <b>Links</b><br><br>
       <i><b>CAUTION!</b> Skip this section if you chose an item without links.  If you fill this in for a non-linked item, the syntax will not work!</i><br><br>
-       I'll take anything with at least this many links: 
+       The item should have at least this many links: 
        
 
       <select id="numberLinks">
-        <option value=" = 0 ">Number of links</option>
-        <option value=" >= 1">
-      1</option>
-        <option value=" >= 2">
-      2</option>
-        <option value=" >= 3">
-      3</option>
-        <option value=" >= 4">
-      4</option>
-        <option value=" >= 5">
-      5</option>
-        <option value=" = 6">
-      6</option>
+        <option value="LinkedSockets = 0 ">Number of links</option>
+        <option value="LinkedSockets >= 1">
+      >= 1</option>
+        <option value="LinkedSockets >= 2">
+      >= 2</option>
+        <option value="LinkedSockets >= 3">
+      >= 3</option>
+        <option value="LinkedSockets >= 4">
+      >= 4</option>
+        <option value="LinkedSockets >= 5">
+      >= 5</option>
+        <option value="LinkedSockets = 6">
+      = 6</option>
       </select>
      
       <br><br>
     Specify colors for this group?
     <select id="socketGroup">
+      
       <option value="SocketGroup ">Yes</option>
-      <option value=" ">No</option>
+      <option value=" " selected>No</option>
     </select>
 <br><br>
       <!--specify socket colors-->
@@ -169,25 +170,25 @@
       6 BLUE</option>
       </select>
       <br><br>  <hr>
-      <b>Sockets</b><br>
+      <b>Sockets</b><br><br>
       <i><b>CAUTION!</b> Skip this section if you chose an item without sockets.  If you fill this in for a non-socketed item, the syntax will not work!</i><br><br>
       I don't care about links, I just want at least this many sockets:
       <select id="socketNumber">
-        <option value=" = 0 ">Number of sockets</option>
-        <option value=" >= 1">
-      1</option>
-        <option value=" >= 2">
-      2</option>
-        <option value=" >= 3">
-      3</option>
-        <option value=" >= 4">
-      4</option>
-        <option value=" >= 5">
-      5</option>
-        <option value=" = 6">
-      6</option>
+        <option value="Sockets = 0 ">Number of sockets</option>
+        <option value="Sockets >= 1">
+      >= 1</option>
+        <option value="Sockets >= 2">
+      >= 2</option>
+        <option value="Sockets >= 3">
+      >= 3</option>
+        <option value="Sockets >= 4">
+      >= 4</option>
+        <option value="Sockets >= 5">
+      >= 5</option>
+        <option value="Sockets = 6">
+      = 6</option>
       </select>
-      <br><br>
+      
 in the colors specified above
  
         
@@ -226,10 +227,10 @@ in the colors specified above
       <select id=
        "iconSize"  >
        <option value=" ">Choose size</option>
-      <option value="0 ">Small</option>
-      <option value="1 " >
+      <option value="MinimapIcon 0 ">Small</option>
+      <option value="MinimapIcon 1 " >
       Medium</option>
-      <option value="2 " >
+      <option value="MinimapIcon 2 " >
       Large</option>
 <option value=" " checked>
       Skip this</option>
@@ -247,6 +248,7 @@ in the colors specified above
         <option value="Yellow ">Yellow</option>
         
               </select>
+              
       <br><br>
       <!--set icon shape-->
       ...and in this shape:
@@ -261,18 +263,20 @@ in the colors specified above
        
         
       </select>
+      <br><br>
+      <i>All 3 selections are required to activate</i>
       <br><br><hr>
       <b>Beam Effect</b><br><br>
       <!--item drop beam effect-->
       Let there be light!  Show a temporary beam effect when this particular item drops in this color**:
       <select id="beamEffect">
         <option value="" selected>Beam Color:</option>
-      <option value="Red">Red</option>
-              <option value="Green">Green</option>
-        <option value="Blue">Blue</option>
-        <option value="Brown">Brown</option>
-        <option value="White">White</option>
-        <option value="Yellow">Yellow</option>
+      <option value="PlayEffect Red">Red</option>
+              <option value="PlayEffect Green">Green</option>
+        <option value="PlayEffect Blue">Blue</option>
+        <option value="PlayEffect Brown">Brown</option>
+        <option value="PlayEffect White">White</option>
+        <option value="PlayEffect Yellow">Yellow</option>
        
       </select>
       <br><br><hr>
@@ -285,9 +289,16 @@ in the colors specified above
             <input type="button" id="dataToText" value="Save data to text file" onclick="saveFile()" />
         </div>
         <br><br>
-       <input type="reset" value="Reset form">
+       <input type="reset" value="Reset form" class="reset">
       </form>
-    
+    <br><br>
+    You did it! Save your POEZFilter.txt file in your 
+    <br><br>
+    My Documents/My Games/Path of Exile 
+    <br><br>
+    folder making sure that <i>production_Config.ini</i> is in this folder and change the "Save as type" to "All Files".  Then rename it as a <i>.filter</i> file.  When you open <i>Path of Exile</i>, open the Options window, go to the UI tab, scroll down to the bottom, and select your filter from the "List of Item Filters". Click Save, and from there you should see the item you created the rules for when the item is on the ground.  If you want to format more items in different ways, you can click "Reset form" and choose again.  When you save your next POEZFilter.txt file, just open it, then copy and paste the syntax block under your previous syntax block in the file you already created.  Save it again, and remember to reload it in the Options/UI of <i>Path of Exile</i>.
+<br><br>
+    I hope this website has made making a filter easy for you, and remember that this is only for general items.  For more advanced filtering, I suggest you reference this <a href="https://pathofexile.gamepedia.com/Item_filter_guide">Filter Guide</a>.
         </body>
      <!--collect data and create downloadable text file-->
      <script>
@@ -323,14 +334,14 @@ const socketNumber = document.getElementById('socketNumber');
         + ' \r\n ' + 
             'Class ' + classType.value 
         + ' \r\n ' + 
-            'Rarity '  + operator.value + rarity.value  
+             operator.value + rarity.value  
         + ' \r\n ' + 
-            'LinkedSockets ' + numberLinks.value 
+             numberLinks.value 
             + ' \r\n ' +
 socketGroup.value +  
             socketGroupRed.value +socketGroupGreen.value + socketGroupBlue.value 
         + ' \r\n ' + 
-'Sockets ' + socketNumber.value 
+ socketNumber.value 
 + ' \r\n ' + 
             'SetTextColor ' + textColor.value
         + ' \r\n ' +
@@ -340,9 +351,9 @@ socketGroup.value +
         + ' \r\n ' +
             'SetFontSize ' + fontSize.value
         + ' \r\n ' +
-            'MinimapIcon ' + iconSize.value + iconColor.value + iconShape.value
+             iconSize.value + iconColor.value + iconShape.value
         + ' \r\n ' +
-         'PlayEffect ' + beamEffect.value 
+          beamEffect.value 
         + ' \r\n ' 
         ;
         
