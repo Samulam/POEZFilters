@@ -12,10 +12,14 @@
   <body>
     <script src="script.js"></script>
   </body>
- <body>
-    <h1>Path of EZFilters</h1>
+ 
+    <header><h1>Path of EZFilters</h1>
+    <br>
+    <h2>Make a basic filter for your items in <i>Path of Exile</i></h2></header>
     <hr>
-    <h3>Welcome!  Let's get started:</h3>
+    <br>
+    <body>
+      <h3>Welcome!  Let's get started:</h3>
     
  
   <br>
@@ -90,7 +94,7 @@
       <br><br>
       <!--specify link conditions-->
       <hr>
-      <b>Links</b><br><br>
+      <b><h3>Links</h3></b>
       <i><b>CAUTION!</b> Skip this section if you chose an item without links.  If you fill this in for a non-linked item, the syntax will not work!</i><br><br>
        The item should have at least this many links: 
        
@@ -170,7 +174,8 @@
       6 BLUE</option>
       </select>
       <br><br>  <hr>
-      <b>Sockets</b><br><br>
+      <b><h3>Sockets</h3>
+      </b>
       <i><b>CAUTION!</b> Skip this section if you chose an item without sockets.  If you fill this in for a non-socketed item, the syntax will not work!</i><br><br>
       I don't care about links, I just want at least this many sockets:
       <select id="socketNumber">
@@ -194,7 +199,7 @@ in the colors specified above
         
       <br><br><hr>
       <!--specify look of item labels-->
-      <b>For the look of the item labels:</b><br><br>
+      <b><h3>For the look of the item labels:</h3></b>
       <label for="textColor">Set the text color to this RGB*: </label>
   <input type="text" id="textColor" name="textColor"><i> Please use spaces, no commas</i><br><br>
      
@@ -221,7 +226,7 @@ in the colors specified above
       <br><br><hr>
      <!--design minimap alerts-->
       <!--minimap icon size-->
-      <b>Minimap Icons (shown when item is received as a drop)</b><br><br>
+      <b><h3>Minimap Icons</h3> (shown when item is received as a drop)</b><br><br>
       I want an icon for this item on the minimap!  (Skip this section if you don't want this)<br><br>
       Make it this big:
       <select id=
@@ -266,7 +271,7 @@ in the colors specified above
       <br><br>
       <i>All 3 selections are required to activate</i>
       <br><br><hr>
-      <b>Beam Effect</b><br><br>
+      <b><h3>Beam Effect</h3></b>
       <!--item drop beam effect-->
       Let there be light!  Show a temporary beam effect when this particular item drops in this color**:
       <select id="beamEffect">
@@ -291,12 +296,21 @@ in the colors specified above
         <br><br>
        <input type="reset" value="Reset form" class="reset">
       </form>
-    <br><br>
-    You did it! Save your POEZFilter.txt file in your 
+    <br><br><hr>
+    <h3>You did it!</h3> Save your POEZFilter.txt file in this folder: 
     <br><br>
     My Documents/My Games/Path of Exile 
     <br><br>
-    folder making sure that <i>production_Config.ini</i> is in this folder and change the "Save as type" to "All Files".  Then rename it as a <i>.filter</i> file.  When you open <i>Path of Exile</i>, open the Options window, go to the UI tab, scroll down to the bottom, and select your filter from the "List of Item Filters". Click Save, and from there you should see the item you created the rules for when the item is on the ground.  If you want to format more items in different ways, you can click "Reset form" and choose again.  When you save your next POEZFilter.txt file, just open it, then copy and paste the syntax block under your previous syntax block in the file you already created.  Save it again, and remember to reload it in the Options/UI of <i>Path of Exile</i>.
+    <ul> 
+      <li>Make sure that <i>production_Config.ini</i> is in this folder</li>
+      <li>Change the "Save as type" to "All Files"</li>
+      <li>Rename it as a <i>.filter</i> file</li>  
+      <li>When you open <i>Path of Exile</i>, open the Options window</li>
+      <li>Go to the UI tab, scroll down to the bottom, and select your filter from the "List of Item Filters"</li>
+      <li> Click the "SAVE" button </li> 
+      </ul><br>
+    In the game you should see the item with the formatting you created while the item is on the ground.  <br>
+    If you want to format more items in different ways, you can click "Reset form" and choose again.  This time when you save your next POEZFilter.txt file, just open it, then copy and paste the syntax block under the previous syntax block in the file you already created.  Save it again, and remember to click the reload arrow in the Options/UI of <i>Path of Exile</i>.
 <br><br>
     I hope this website has made making a filter easy for you, and remember that this is only for general items.  For more advanced filtering, I suggest you reference this <a href="https://pathofexile.gamepedia.com/Item_filter_guide">Filter Guide</a>.
         </body>
