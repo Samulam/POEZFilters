@@ -90,8 +90,8 @@
       <br><br>
       <!--specify link conditions-->
       <hr>
-      <b>Links</b><br>
-      <i>Skip this section if you chose an item without links.</i><br><br>
+      <b>Links</b><br><br>
+      <i><b>CAUTION!</b> Skip this section if you chose an item without links.  If you fill this in for a non-linked item, the syntax will not work!</i><br><br>
        I'll take anything with at least this many links: 
        
 
@@ -284,7 +284,8 @@ in the colors specified above
       <label for="dataToText">I'm done now!  Ready to </label>
             <input type="button" id="dataToText" value="Save data to text file" onclick="saveFile()" />
         </div>
-      
+        <br><br>
+       <input type="reset" value="Reset form">
       </form>
     
         </body>
@@ -341,7 +342,7 @@ socketGroup.value +
         + ' \r\n ' +
             'MinimapIcon ' + iconSize.value + iconColor.value + iconShape.value
         + ' \r\n ' +
-            'PlayEffect ' + beamEffect.value 
+         'PlayEffect ' + beamEffect.value 
         + ' \r\n ' 
         ;
         
